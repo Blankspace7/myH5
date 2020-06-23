@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <title>Title</title>
         <link rel="stylesheet" type="text/css" href="css/page.css"></link>
+    <script>
+        function audioAutoPlay(id){
+            var audio = document.getElementById(id);
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+            document.addEventListener('YixinJSBridgeReady', function() {
+                audio.play();
+            }, false);
+        }
+    </script>
+</head>
+<body>
+<audio src="wav/bgm.mp3" controls="controls" loop="loop">
+</audio>
 </head>
 <body>
 <page id="c">春</page>
 <page id="x">夏</page>
 <page id="q">秋</page>
-<page id="d">冬</page>
+<page id="d">冬
+<span id="z">贞下启元</span></page>
 </body>
 </html>

@@ -39,6 +39,18 @@
             animation: mysecond 7.47s infinite;
         }
     </style>
+    <script>
+        function audioAutoPlay(id){
+            var audio = document.getElementById(id);
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+            document.addEventListener('YixinJSBridgeReady', function() {
+                audio.play();
+            }, false);
+        }
+    </script>
 </head>
 <body>
 <audio src="wav/bgm.mp3" controls="controls" loop="loop">
